@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 import { breakpoints } from 'styles/breakpoints'
 
+export const Lien = styled.a`
+	color: red;
+	font-size: 24px;
+`
+
+export const Error = styled.p`
+	color: white;
+	font-size: 24px;
+`
+
 export const List = styled.ul`
 	display: block;
 	max-width: 542px;

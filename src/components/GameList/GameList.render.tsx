@@ -2,7 +2,7 @@ import React, { ChangeEvent, ReactElement } from 'react'
 import GameCard from 'components/GameCard'
 import GameFilter from 'components/GameFilter'
 import { Game } from 'types'
-import { List, ListItem } from './styles'
+import { List, ListItem, Lien, Error } from './styles'
 
 interface Props {
 	err?: string
@@ -12,10 +12,14 @@ interface Props {
 
 const GameList = ({ err, games, onFilterChange }: Props): ReactElement => {
 	if (err) {
-		return <p>Impossible de récupérer le jeu</p>
+		return <Error>Impossible de récupérer le jeu</Error>
 	}
 	if (!games?.length) {
-		return <p>Aucun jeu disponible</p>
+		return (
+			<Error>
+				Aucun jeu disponible merci de <Lien href="/">cliquer ici</Lien>.
+			</Error>
+		)
 	}
 	return (
 		<>
