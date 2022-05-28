@@ -17,7 +17,7 @@ const GameList = ({ err, games, onFilterChange }: Props): ReactElement => {
 	if (!games?.length) {
 		return (
 			<Error>
-				Aucun jeu disponible merci de <Lien href="/">cliquer ici</Lien>.
+				Aucun jeu disponible merci de &nbsp; <Lien href="/"> cliquer ici</Lien>.
 			</Error>
 		)
 	}

@@ -9,6 +9,9 @@ export const Lien = styled.a`
 export const Error = styled.p`
 	color: white;
 	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	margin-top: 250px;
 `
 
 export const List = styled.ul`
